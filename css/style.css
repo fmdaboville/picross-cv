@@ -1,0 +1,9 @@
+/*
+Custom CSS styles
+Authors : 	François-Marie d'Aboville
+			Jehan Poublan
+*/
+
+body > .container {
+  padding: 60px 15px 0;
+}
