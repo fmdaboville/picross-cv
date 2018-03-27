@@ -1,4 +1,4 @@
-# Piccross CV
+# Picross CV
 Discover my cv playing picross
 
 # Authors
