@@ -7,3 +7,8 @@ Authors : 	François-Marie d'Aboville
 body > .container {
   padding: 60px 15px 0;
 }
+
+#home, #play, #rules, #propos {
+	padding: 60px 15px 0;
+	height: 1000px;
+}
