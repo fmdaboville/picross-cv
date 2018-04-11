@@ -14,7 +14,7 @@ Université Toulouse Jean-Jaurès
 ICHRISI.BIZAT.COM
 
 * Attentes
-		* `/custom_js/picross_play.html?5.7|XXx6bn`		
+    * `/custom_js/picross_play.html?5.7|XXx6bn`		
     * `/custom_js/picross_play.html?5.5|8Kv70`
 * Compétences professionnelles
     * `/custom_js/picross_play.html?5.6|Y1f5d`
