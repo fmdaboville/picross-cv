@@ -1,0 +1,30 @@
+table.premadepuzzles	{border:5px solid #999944;padding:10px;}
+table.maintable			{border:5px solid #FF4477;padding:10px;}
+table.maintable.victory	{border-color:#447744;}
+td.topnums td			{width:30px;background:#EEEEEE;border-left:1px solid #222222;border-right:1px solid #222222;text-align:center;vertical-align:bottom;}
+td.sidenums td			{height:32px;background:#EEEEEE;border-top:1px solid #222222;border-bottom:1px solid #222222;text-align:right;vertical-align:middle;}
+td.sidenums td.line_t	{height:33px;}
+td.sidenums td.line_b	{height:33px;}
+td.maintds td			{border:1px solid #222222;}
+.maintable td.line_t	{border-top:2px solid blue;}
+.maintable td.line_b	{border-bottom:2px solid blue;}
+.maintable td.line_l	{border-left:2px solid blue;}
+.maintable td.line_r	{border-right:2px solid blue;}
+.maintable td.line_tl	{border-top:2px solid blue;border-left:2px solid blue;}
+.maintable td.line_tr	{border-top:2px solid blue;border-right:2px solid blue;}
+.maintable td.line_bl	{border-bottom:2px solid blue;border-left:2px solid blue;}
+.maintable td.line_br	{border-bottom:2px solid blue;border-right:2px solid blue;}
+.maintable td.line_tlr	{border-top:2px solid blue;border-left:2px solid blue;border-right:2px solid blue;}
+.maintable td.line_blr	{border-bottom:2px solid blue;border-left:2px solid blue;border-right:2px solid blue;}
+.maintable td.line_tbl	{border-top:2px solid blue;border-bottom:2px solid blue;border-left:2px solid blue;}
+.maintable td.line_tbr	{border-top:2px solid blue;border-bottom:2px solid blue;border-right:2px solid blue;}
+/* TODO maybe: make those simpler. */
+td.maintds div		{width:30px;height:30px;}
+td.maintds div.unk	{background:white;}
+td.maintds div.yes	{background:black;}
+td.maintds div.no	{background:#BBBBBB;}
+
+.strike		{cursor:crosshair;border-right:1px solid #666666;border-left:1px solid #666666;color:#666666;text-decoration:overline underline;}
+.nostrike	{cursor:crosshair;border-right:1px solid #EEEEEE;border-left:1px solid #EEEEEE;}
+.hidden		{display:none;}
+.nothidden	{display:inline;}
