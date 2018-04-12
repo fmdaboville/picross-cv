@@ -40,21 +40,21 @@
   </header>
   <div class="container">
     <h1>Jeu</h1>
+    <div id="titlelevel"></div>
     <div>
       <br />
       <center>
-        Click to mark a square as filled, shift-click to mark a square as empty.<br>Also, you can click and drag.<br /><br />
+        <p>Rappel : Cliquez pour cocher la case, vous pouvez aussi garder le clic enfoncé et vous déplacer sur la grille</p>
         <table id="maintable" class="maintable">
           <tr>
             <td>
               <table border="0px" cellpadding="0px" cellspacing="0px">
                 <tr>
                   <td id="statustd">
-                    This Picross is done via Javascript.
-                    Consequently, if your browser can't handle the Javascript used, this won't work.
-                    <br><br>Signs to look for are...well...this.
-                    If this page has fully loaded, and you still see this message, it probably ain't gunna happen.
-                    <br><br>Sorry.
+                    <p>Le projet a besoin de javascript pour fonctionner ! Si vous voyez ce message c'est que vous n'avez pas javascript activé...</p>
+                    <p>Si vous rencontrez des soucis, nhésitez pas à nous contacter : </p>
+                    <p>François-Marie d'Aboville : fmdaboville@hotmail.fr</p>
+                    <p>Jehan Poublan : jehanpoublan@gmail.com</p>
                   </td>
                   <td class="topnums" id="topnums"></td>
                 </tr>
@@ -69,10 +69,13 @@
         <br><br>
         <div id="victorydiv" style="display:none">
           <h1><font color="#888800">Bravo ! </font></h1>
-          <p>Cliquez sur le bouton ci-dessous pour accéder au niveau suivant : </p>
-          <div class="text-center">
-            <a href="html/level.html?5.7|XXx6bn"><button type="button" class="btn btn-secondary">Niveau suivant</button></a>
-          </div>
+          <p>Cliquez sur le bouton suivant pour accéder aux résultats de ce niveau.</p>
+          <p>Ceci aura pour effet d'ouvrir un nouvel onglet, assurez-vous d'avoir cliqué sur ce bouton avant 
+            <br />d'accéder au niveau suivant sinon il vous faudra tout recommencer !
+          </p>
+          <p>Rappel : Vous pouvez accéder à tous les résultats via le menu.</p>
+          <div id="printres" class="text-center"></div>
+          <div id="nextlevel" class="text-center"></div>
         </div>
       </center>
       <script type="text/javascript" src="../js/helper.js"></script>
@@ -85,6 +88,9 @@
         var lockClass = false;
         var victory = false;
         var isPlaying = true;
+
+        var titlelevel = getTitle();
+        grabit('titlelevel').innerHTML = titlelevel;
 
         /* ########################################## */
         /* ##### Functions start here. They are ##### */

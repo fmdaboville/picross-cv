@@ -73,9 +73,9 @@ function getPuzzle() {
 }
 
 var alphabet = {
-	 0: '0',  1: '1',  2: '2',  3: '3',  4: '4',  5: '5',  6: '6',  7: '7',  8: '8',  9: '9',
+	0: '0',  1: '1',  2: '2',  3: '3',  4: '4',  5: '5',  6: '6',  7: '7',  8: '8',  9: '9',
 	10: '_', 11: 'a', 12: 'b', 13: 'c', 14: 'd', 15: 'e', 16: 'f', 17: 'g', 18: 'h', 19: 'i',
-	20: 'j', 21: 'k', 22: 'l', 23: 'm', 24: 'n', 25: 'o', 26: 'p', 27: 'q', 28: '-', 29: 'r', // 28 shall be '-' for historical / backwards-compatability reasons
+	20: 'j', 21: 'k', 22: 'l', 23: 'm', 24: 'n', 25: 'o', 26: 'p', 27: 'q', 28: '-', 29: 'r',
 	30: 's', 31: 't', 32: 'u', 33: 'v', 34: 'w', 35: 'x', 36: 'y', 37: 'z', 38: 'A', 39: 'B',
 	40: 'C', 41: 'D', 42: 'E', 43: 'F', 44: 'G', 45: 'H', 46: 'I', 47: 'J', 48: 'K', 49: 'L',
 	50: 'M', 51: 'N', 52: 'O', 53: 'P', 54: 'Q', 55: 'R', 56: 'S', 57: 'T', 58: 'U', 59: 'V',
@@ -149,6 +149,31 @@ function changeVal(row, col, newVal){
 		if(userPuzzle.data.join(',').replace(/2/g, '0') === myPuzzle.data.join(',')){
 			window.victory=true;
 			grabit('maintable').className = 'maintable victory';
+
+			var printres = '<a href="';
+			printres += getResults();
+			printres += '" target="_blank"><button type="button" class="btn btn-warning btn-lg">Voir les résultats</button></a>';
+			printres += '<br /><br /><br />'
+			grabit('printres').innerHTML = printres;
+
+			var nextlvl = getNextLevel();
+			if (nextlvl != 'last') {
+				var next = '';
+				next += '<p>Cliquez sur le bouton ci-dessous pour accéder au niveau suivant : </p>';
+				next += '<a href="level.html';
+				next += nextlvl;
+				next += '"><button type="button" class="btn btn-secondary">Niveau suivant</button></a>';
+				next += '<br /><br /><br />';
+				grabit('nextlevel').innerHTML = next;
+			} else {
+				var last = '';
+				last += '<p>Félicitations vous avez terminé le dernier niveau !</p>';
+				last += '<a href="../index.html"><button type="button" class="btn btn-secondary">Revenir à la page d\'accueil</button></a>';
+				last += '<br /><br /><br />';
+				grabit('nextlevel').innerHTML = last;
+			}
+			
+
 			grabit('victorydiv').style.display = 'inline';
 			grabit('topnums' ).innerHTML = grabit('topnums' ).innerHTML.replace(/nostrike/g,'strike');
 			grabit('sidenums').innerHTML = grabit('sidenums').innerHTML.replace(/nostrike/g,'strike');
@@ -157,4 +182,157 @@ function changeVal(row, col, newVal){
 	} else {
 		myPuzzle.data[row] = myPuzzle.data[row].substring(0,col) + newVal + myPuzzle.data[row].substring(col+1);
 	}
+}
+
+function getResults() {
+	var result = '';
+	var urllevel = decodeURIComponent(window.location.search);
+	switch(urllevel) {
+		case '?5.7|XXx6bn':
+		result = 'resultats/fmdaboville/attentes.html';
+		break;
+		case '?5.5|8Kv70':
+		result = 'resultats/jpoublan/attentes.html';
+		break;
+		case '?5.6|Y1f5d':
+		result = 'resultats/fmdaboville/competences.html';
+		break;
+		case '?4.9|rBg4UI':
+		result = 'resultats/jpoublan/competences.html';
+		break;
+		case '?5.5|8VXqu':
+		result = 'resultats/fmdaboville/itineraire.html';
+		break;
+		case '?5.5|kZVw0':
+		result = 'resultats/jpoublan/itineraire.html';
+		break;
+		case '?5.5|szdXu':
+		result = 'resultats/fmdaboville/formation.html';
+		break;
+		case '?5.8|8VZM4Cu':
+		result = 'resultats/resultats/jpoublan/formation.html';
+		break;
+		case '?5.5|EVVEu':
+		result = 'resultats/fmdaboville/personnalite.html';
+		break;
+		case '?9.8|s7WJRZZPYGLA':
+		result = 'resultats/jpoublan/personnalite.html';
+		break;
+		case '?5.10|-Szty9Ybf':
+		result = 'resultats/fmdaboville/interets.html';
+		break;
+		case '?5.9|Kv24dsz8':
+		result = 'resultats/jpoublan/interets.html';
+		break;
+		case '?11.8|888uZxrJZRXC_cu':
+		result = 'resultats/fmdaboville/cv.html';
+		break;
+		case '?10.7|vNeJVZZZWYvK':
+		result = 'resultats/jpoublan/cv.html';
+		break;
+		default:
+	}
+	return result;
+}
+
+function getNextLevel() {
+	var level = '';
+	var urllevel = decodeURIComponent(window.location.search);
+	switch(urllevel) {
+		case '?5.7|XXx6bn':
+		level = '?5.5|8Kv70';
+		break;
+		case '?5.5|8Kv70':
+		level = '?5.6|Y1f5d';
+		break;
+		case '?5.6|Y1f5d':
+		level = '?4.9|rBg4UI';
+		break;
+		case '?4.9|rBg4UI':
+		level = '?5.5|8VXqu';
+		break;
+		case '?5.5|8VXqu':
+		level = '?5.5|kZVw0';
+		break;
+		case '?5.5|kZVw0':
+		level = '?5.5|szdXu';
+		break;
+		case '?5.5|szdXu':
+		level = '?5.8|8VZM4Cu';
+		break;
+		case '?5.8|8VZM4Cu':
+		level = '?5.5|EVVEu';
+		break;
+		case '?5.5|EVVEu':
+		level = '?9.8|s7WJRZZPYGLA';
+		break;
+		case '?9.8|s7WJRZZPYGLA':
+		level = '?5.10|-Szty9Ybf';
+		break;
+		case '?5.10|-Szty9Ybf':
+		level = '?5.9|Kv24dsz8';
+		break;
+		case '?5.9|Kv24dsz8':
+		level = '?11.8|888uZxrJZRXC_cu';
+		break;
+		case '?11.8|888uZxrJZRXC_cu':
+		level = '?10.7|vNeJVZZZWYvK';
+		break;
+		case '?10.7|vNeJVZZZWYvK':
+		level = 'last';
+		break;
+		default:
+	}
+	return level;
+}
+
+function getTitle() {
+	var urllevel = decodeURIComponent(window.location.search);
+	var title = 'Niveau ';
+	switch(urllevel) {
+		case '?5.7|XXx6bn':
+		title += '1';
+		break;
+		case '?5.5|8Kv70':
+		title += '2';
+		break;
+		case '?5.6|Y1f5d':
+		title += '3';
+		break;
+		case '?4.9|rBg4UI':
+		title += '4';
+		break;
+		case '?5.5|8VXqu':
+		title += '5';
+		break;
+		case '?5.5|kZVw0':
+		title += '6';
+		break;
+		case '?5.5|szdXu':
+		title += '7';
+		break;
+		case '?5.8|8VZM4Cu':
+		title += '8';
+		break;
+		case '?5.5|EVVEu':
+		title += '9';
+		break;
+		case '?9.8|s7WJRZZPYGLA':
+		title += '10';
+		break;
+		case '?5.10|-Szty9Ybf':
+		title += '11';
+		break;
+		case '?5.9|Kv24dsz8':
+		title += '12';
+		break;
+		case '?11.8|888uZxrJZRXC_cu':
+		title += '13';
+		break;
+		case '?10.7|vNeJVZZZWYvK':
+		title += '14';
+		break;
+		default:
+	}
+	return '<h2>' + title + '</h2>';
 }
