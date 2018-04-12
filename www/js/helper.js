@@ -210,7 +210,7 @@ function getResults() {
 		result = 'resultats/fmdaboville/formation.html';
 		break;
 		case '?5.8|8VZM4Cu':
-		result = 'resultats/resultats/jpoublan/formation.html';
+		result = 'resultats/jpoublan/formation.html';
 		break;
 		case '?5.5|EVVEu':
 		result = 'resultats/fmdaboville/personnalite.html';
