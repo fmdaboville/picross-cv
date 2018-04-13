@@ -11,7 +11,7 @@ table.premadepuzzles {
     border-color:#447744;
 }
 */
- td.topnums td {
+td.topnums td {
     width:31px;
     background:#EEEEEE;
     border-left:1px solid #222222;
@@ -19,7 +19,7 @@ table.premadepuzzles {
     text-align:center;
     vertical-align:bottom;
 }
- td.sidenums td {
+td.sidenums td {
     height:31px;
     background:#EEEEEE;
     border-top:1px solid #222222;
@@ -27,13 +27,13 @@ table.premadepuzzles {
     text-align:right;
     vertical-align:middle;
 }
- td.sidenums td.line_t {
+td.sidenums td.line_t {
     height:31px;
 }
- td.sidenums td.line_b {
+td.sidenums td.line_b {
     height:31px;
 }
- td.maintds td {
+td.maintds td {
     border:1px solid #222222;
 }
 /*.maintable td.line_t {
@@ -86,35 +86,34 @@ table.premadepuzzles {
 }
 */
 /* TODO maybe: make those simpler. */
- td.maintds div {
+td.maintds div {
     width:30px;
     height:30px;
 }
- td.maintds div.unk {
+td.maintds div.unk {
     background:white;
 }
- td.maintds div.yes {
+td.maintds div.yes {
     background:black;
 }
- td.maintds div.no {
+td.maintds div.no {
     background:#BBBBBB;
 }
- .strike {
+.strike {
     cursor:crosshair;
     border-right:1px solid #666666;
     border-left:1px solid #666666;
     color:#666666;
     text-decoration:overline underline;
 }
- .nostrike {
+.nostrike {
     cursor:crosshair;
     border-right:1px solid #EEEEEE;
     border-left:1px solid #EEEEEE;
 }
- .hidden {
+.hidden {
     display:none;
 }
- .nothidden {
+.nothidden {
     display:inline;
 }
- 
