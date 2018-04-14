@@ -156,7 +156,8 @@ function changeVal(row, col, newVal){
 			printres += '<br /><br /><br />'
 			grabit('printres').innerHTML = printres;
 
-			var nextlvl = getNextLevel();
+			/*
+            var nextlvl = getNextLevel();
 			if (nextlvl != 'last') {
 				var next = '';
 				next += '<p>Cliquez sur le bouton ci-dessous pour accéder au niveau suivant : </p>';
@@ -171,7 +172,7 @@ function changeVal(row, col, newVal){
 				last += '<a href="../index.html"><button type="button" class="btn btn-secondary">Revenir à la page d\'accueil</button></a>';
 				last += '<br /><br /><br />';
 				grabit('nextlevel').innerHTML = last;
-			}
+			}*/
 			
 
 			grabit('victorydiv').style.display = 'inline';
