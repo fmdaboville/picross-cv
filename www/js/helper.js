@@ -152,7 +152,7 @@ function changeVal(row, col, newVal){
 
 			var printres = '<a href="';
 			printres += getResults();
-			printres += '" target="_blank"><button type="button" class="btn btn-warning btn-lg">Voir les résultats</button></a>';
+			printres += '"><button type="button" class="btn btn-warning btn-lg">Voir les résultats</button></a>';
 			printres += '<br /><br /><br />'
 			grabit('printres').innerHTML = printres;
 
