@@ -1,3 +1,3 @@
 FROM nginx
-COPY www /usr/share/nginx/html
+COPY picrossCV /usr/share/nginx/html
 
